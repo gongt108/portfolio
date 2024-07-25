@@ -9,19 +9,22 @@ function App() {
 	return (
 		<div>
 			<div className="snap-y overflow-y-scroll snap-mandatory h-screen">
-				<section className="h-screen bg-slate-700 snap-start">
-					<h1>Vite + React</h1>
-					<div className="flex">
-						<button onClick={() => setCount((count) => count + 1)}>
-							Resume {count}
+				<section className="flex flex-col h-screen bg-slate-700 snap-start  justify-center items-center">
+					<h1 className="text-3xl text-white font-bold mb-4">Vite + React</h1>
+					<div className="flex space-x-2">
+						<button
+							className="bg-black bg-opacity-35 rounded-md px-3 py-2 text-white font-semibold"
+							onClick={() => setCount((count) => count + 1)}
+						>
+							Resume
 						</button>
-						<button onClick={() => setCount((count) => count + 1)}>
-							Projects {count}
+						<button
+							className="bg-white bg-opacity-45 rounded-md px-3 py-2 font-semibold"
+							onClick={() => setCount((count) => count + 1)}
+						>
+							Projects
 						</button>
 					</div>
-					<p>
-						Edit <code>src/App.jsx</code> and save to test HMR
-					</p>
 				</section>
 				<section className="h-screen snap-start">
 					<h1>Projects</h1>
