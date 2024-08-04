@@ -3,8 +3,11 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './index.css';
 
+import ProjectCarousel from './ProjectCarousel';
+
 function App() {
 	const [count, setCount] = useState(0);
+	const colors = ['red', 'blue', 'green', 'purple', 'orange', 'yellow'];
 
 	return (
 		<div>
@@ -28,7 +31,8 @@ function App() {
 				</section>
 				<section className="h-screen snap-start flex" id="project-preview">
 					<div className="flex snap-x h-100">
-						<div className="w-100"></div>
+						{/* <div className="w-100 snap-start bg-${color[0]}-500"></div> */}
+						<ProjectCarousel />
 					</div>
 					<a
 						href="/"
