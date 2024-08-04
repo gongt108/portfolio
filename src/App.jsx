@@ -10,8 +10,8 @@ function App() {
 	const colors = ['red', 'blue', 'green', 'purple', 'orange', 'yellow'];
 
 	return (
-		<div>
-			<div className="snap-y overflow-y-scroll snap-mandatory h-screen">
+		<div className="no-scrollbar">
+			<div className="snap-y overflow-y-scroll snap-mandatory h-screen no-scrollbar">
 				<section className="flex flex-col h-screen bg-slate-700 snap-start  justify-center items-center">
 					<h1 className="text-3xl text-white font-bold mb-4">Vite + React</h1>
 					<div className="flex space-x-2">
