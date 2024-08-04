@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './index.css';
 
 import ProjectCarousel from './ProjectCarousel';
+
+import { LuArrowUpFromLine } from 'react-icons/lu';
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -36,7 +36,13 @@ function App() {
 					</div>
 					<a
 						href="/"
-						className="absolute bottom-4 right-4 bg-blue-900 bg-opacity-35 border-2 border-blue-900 rounded-md px-3 py-2 font-semibold"
+						className="absolute bottom-4 right-4 bg-blue-900 bg-opacity-35 border-2 border-blue-900 rounded-full p-3 font-semibold md:invisible lg:invisible"
+					>
+						<LuArrowUpFromLine />
+					</a>
+					<a
+						href="/"
+						className="absolute bottom-4 right-4 bg-blue-900 bg-opacity-35 border-2 border-blue-900 rounded-md px-3 py-2 font-semibold invisible sm:invisible md:visible lg:visible"
 					>
 						Back to Top
 					</a>
