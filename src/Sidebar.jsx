@@ -7,6 +7,10 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 function Sidebar() {
 	const [isMinimized, setIsMinimized] = useState(true);
 
+	const closeSidebar = () => {
+		setIsMinimized(true);
+	};
+
 	return (
 		<div>
 			{isMinimized && (
@@ -20,7 +24,10 @@ function Sidebar() {
 			{!isMinimized && (
 				<div className="bg-white border-l border-black text-blue-900 absolute top-0 right-0 pr-4 h-full z-50">
 					<div className="flex h-full">
-						<div className="h-full flex align-middle items-center px-2 hover:cursor-pointer hover:bg-blue-200 hover:font-bold ">
+						<div
+							className="h-full flex align-middle items-center px-2 hover:cursor-pointer hover:bg-blue-200 hover:font-bold "
+							onClick={closeSidebar}
+						>
 							<MdKeyboardArrowRight />
 						</div>
 						<div className="flex flex-col h-full align-middle justify-center">
