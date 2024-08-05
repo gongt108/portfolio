@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './index.css';
 
+import Sidebar from './Sidebar';
 import ProjectCarousel from './ProjectCarousel';
 
 import { LuArrowUpFromLine } from 'react-icons/lu';
@@ -12,7 +13,8 @@ function App() {
 	return (
 		<div className="no-scrollbar">
 			<div className="snap-y overflow-y-scroll snap-mandatory h-screen no-scrollbar">
-				<section className="flex flex-col h-screen bg-slate-700 snap-start  justify-center items-center">
+				<Sidebar />
+				<section className="flex flex-col h-screen bg-slate-700 snap-start  justify-center items-center z-10">
 					<h1 className="text-3xl text-white font-bold mb-4">Vite + React</h1>
 					<div className="flex space-x-2">
 						<a
