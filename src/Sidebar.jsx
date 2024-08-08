@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoIosArrowDown } from 'react-icons/io';
@@ -6,9 +7,15 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 
 function Sidebar() {
 	const [isMinimized, setIsMinimized] = useState(true);
+	const navigateTo = useNavigate();
 
 	const closeSidebar = () => {
 		setIsMinimized(true);
+	};
+
+	const pageNavigate = () => {
+		setIsMinimized(true);
+		navigateTo(`/#project-preview`);
 	};
 
 	return (
@@ -31,28 +38,49 @@ function Sidebar() {
 							<MdKeyboardArrowRight />
 						</div>
 						<div className="flex flex-col h-full align-middle justify-center">
-							<div className="border-b border-gray-400 pb-2 pr-2 mb-2">
+							<div
+								className="border-b border-gray-400 pb-2 pr-2 mb-2"
+								onClick={pageNavigate}
+							>
 								Home Page
 							</div>
-							<div className="border-b border-gray-400 pb-2 pr-2 mb-2">
+							<div
+								className="border-b border-gray-400 pb-2 pr-2 mb-2"
+								onClick={pageNavigate}
+							>
 								Project Previews
 							</div>
 							<div className="border-b border-gray-400 pb-2 pr-2 mb-2 flex align-middle items-center justify-between hover:underline">
 								Projects <IoIosArrowDown />{' '}
 							</div>
-							<div className="border-b border-gray-300 pl-2 pb-2 pr-2 mb-2 flex align-middle items-center justify-between hover:underline">
+							<div
+								className="border-b border-gray-300 pl-2 pb-2 pr-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								onClick={pageNavigate}
+							>
 								Project 1
 							</div>
-							<div className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline">
+							<div
+								className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								onClick={pageNavigate}
+							>
 								Project 2
 							</div>
-							<div className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline">
+							<div
+								className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								onClick={pageNavigate}
+							>
 								Project 3
 							</div>
-							<div className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline">
+							<div
+								className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								onClick={pageNavigate}
+							>
 								Project 4
 							</div>
-							<div className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline">
+							<div
+								className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								onClick={pageNavigate}
+							>
 								Project 5
 							</div>
 						</div>
