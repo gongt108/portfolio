@@ -7,7 +7,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 
 function Sidebar() {
 	const [isMinimized, setIsMinimized] = useState(true);
-	const navigateTo = useNavigate();
+	// const navigate = useNavigate();
 
 	const closeSidebar = () => {
 		setIsMinimized(true);
@@ -15,7 +15,7 @@ function Sidebar() {
 
 	const pageNavigate = () => {
 		setIsMinimized(true);
-		navigateTo(`/#project-preview`);
+		// navigateTo(`/#project-preview`);
 	};
 
 	return (
@@ -38,51 +38,58 @@ function Sidebar() {
 							<MdKeyboardArrowRight />
 						</div>
 						<div className="flex flex-col h-full align-middle justify-center">
-							<div
+							<a
 								className="border-b border-gray-400 pb-2 pr-2 mb-2"
-								onClick={pageNavigate}
+								onClick={closeSidebar}
+								href="/"
 							>
 								Home Page
-							</div>
-							<div
+							</a>
+							<a
 								className="border-b border-gray-400 pb-2 pr-2 mb-2"
 								onClick={pageNavigate}
+								href="/#project-preview"
 							>
 								Project Previews
-							</div>
-							<div className="border-b border-gray-400 pb-2 pr-2 mb-2 flex align-middle items-center justify-between hover:underline">
+							</a>
+							<a className="border-b border-gray-400 pb-2 pr-2 mb-2 flex align-middle items-center justify-between hover:underline">
 								Projects <IoIosArrowDown />{' '}
-							</div>
-							<div
+							</a>
+							<a
 								className="border-b border-gray-300 pl-2 pb-2 pr-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								href="#"
 								onClick={pageNavigate}
 							>
 								Project 1
-							</div>
-							<div
+							</a>
+							<a
 								className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								href="#"
 								onClick={pageNavigate}
 							>
 								Project 2
-							</div>
-							<div
+							</a>
+							<a
 								className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								href="#"
 								onClick={pageNavigate}
 							>
 								Project 3
-							</div>
-							<div
+							</a>
+							<a
 								className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								href="#"
 								onClick={pageNavigate}
 							>
 								Project 4
-							</div>
-							<div
+							</a>
+							<a
 								className="border-b border-gray-300 pl-2 pb-2 mb-2 flex align-middle items-center justify-between hover:underline"
+								href="#"
 								onClick={pageNavigate}
 							>
 								Project 5
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>

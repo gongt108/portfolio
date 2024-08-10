@@ -12,9 +12,9 @@ function App() {
 
 	return (
 		<div className="no-scrollbar">
-			<div className="snap-y overflow-y-scroll snap-mandatory h-screen no-scrollbar">
+			<div className="snap-y overflow-y-scroll snap-mandatory w-screen h-screen no-scrollbar">
 				<Sidebar />
-				<section className="flex flex-col h-screen bg-slate-700 snap-start  justify-center items-center z-10">
+				<section className="flex flex-col h-screen bg-slate-700 snap-start justify-center items-center z-10">
 					<h1 className="text-3xl text-white font-bold mb-4">Vite + React</h1>
 					<div className="flex space-x-2">
 						<a
@@ -31,11 +31,11 @@ function App() {
 						</a>
 					</div>
 				</section>
-				<section className="h-screen snap-start flex" id="project-preview">
-					<div className="flex snap-x h-100">
-						{/* <div className="w-100 snap-start bg-${color[0]}-500"></div> */}
-						<ProjectCarousel />
-					</div>
+				<section
+					className="h-screen w-100 snap-start flex overflow-y-hidden bg-slate-500"
+					id="project-preview"
+				>
+					<ProjectCarousel />
 					<a
 						href="/"
 						className="absolute bottom-4 right-4 bg-blue-900 bg-opacity-35 border-2 border-blue-900 rounded-full p-3 font-semibold md:invisible lg:invisible"
