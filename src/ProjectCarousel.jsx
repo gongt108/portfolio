@@ -30,9 +30,12 @@ function ProjectCarousel() {
 	const [currentProjectId, setCurrentProjectId] = useState(0);
 
 	return (
-		<div className="flex">
-			<div className="my-auto bg-white bg-opacity-30 border-4 border-white px-2 py-3">
-				<MdKeyboardArrowLeft color="white" size={32} />
+		<div className="flex relative h-100">
+			<div className="absolute z-10 left-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2">
+				<MdKeyboardArrowLeft
+					size={32}
+					className="self-center text-gray-600 group-hover:text-white"
+				/>
 			</div>
 			<div className="w-100 h-100 relative">
 				<h2 className="absolute text-white text-3xl font-bold top-4 left-1/2">
@@ -55,8 +58,11 @@ function ProjectCarousel() {
 					})}
 				</div>
 			</div>
-			<div className="my-auto bg-white bg-opacity-30 border-4 border-white px-2 py-3">
-				<MdKeyboardArrowRight color="white" size={32} />
+			<div className="absolute z-10 right-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2">
+				<MdKeyboardArrowRight
+					className="self-center text-gray-600 group-hover:text-white"
+					size={32}
+				/>
 			</div>
 		</div>
 	);
