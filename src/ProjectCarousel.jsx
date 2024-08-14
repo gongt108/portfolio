@@ -30,33 +30,37 @@ function ProjectCarousel() {
 	const [currentProjectId, setCurrentProjectId] = useState(0);
 
 	return (
-		<div className="flex relative h-100">
+		<div className="flex relative h-100 mx-auto items-center justify-center">
 			<div className="absolute z-10 left-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2">
 				<MdKeyboardArrowLeft
 					size={32}
 					className="self-center text-gray-600 group-hover:text-white"
 				/>
 			</div>
-			<div className="w-100 h-100 relative">
-				<h2 className="absolute text-white text-3xl font-bold top-4 left-1/2">
-					{tempFiles[currentProjectId].name}
-				</h2>
+
+			<div className="h-100 mx-auto">
 				<img
+					className="object-fill"
 					src={tempFiles[currentProjectId].imgUrl}
 					alt={`${tempFiles[currentProjectId].name} image`}
 					className="z-10"
 				/>
-				<div className="flex absolute left-1/2 bottom-8 z-20">
-					{tempFiles.map((file, i) => {
-						return (
-							<div key={i}>
-								<div>
-									<GoDotFill color="white" />
-								</div>
+			</div>
+			{/* <div className=""> */}
+			<h2 className="absolute top-4 z-20 text-white text-3xl font-bold">
+				{tempFiles[currentProjectId].name}
+			</h2>
+			{/* </div> */}
+			<div className="flex absolute bottom-8 z-20">
+				{tempFiles.map((file, i) => {
+					return (
+						<div key={i}>
+							<div>
+								<GoDotFill color="white" />
 							</div>
-						);
-					})}
-				</div>
+						</div>
+					);
+				})}
 			</div>
 			<div className="absolute z-10 right-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2">
 				<MdKeyboardArrowRight
