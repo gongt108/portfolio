@@ -29,9 +29,28 @@ const tempFiles = [
 function ProjectCarousel() {
 	const [currentProjectId, setCurrentProjectId] = useState(0);
 
+	const prevProject = () => {
+		if (currentProjectId == 0) {
+			setCurrentProjectId(tempFiles.length - 1);
+		} else {
+			setCurrentProjectId(currentProjectId - 1);
+		}
+	};
+
+	const nextProject = () => {
+		if (currentProjectId == tempFiles.length - 1) {
+			setCurrentProjectId(0);
+		} else {
+			setCurrentProjectId(currentProjectId + 1);
+		}
+	};
+
 	return (
 		<div className="flex relative h-100 mx-auto items-center justify-center">
-			<div className="absolute z-10 left-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2 active:bg-gray-400 active:bg-opacity-30">
+			<div
+				onClick={prevProject}
+				className="absolute z-10 left-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2 active:bg-gray-400 active:bg-opacity-30"
+			>
 				<MdKeyboardArrowLeft
 					size={32}
 					className="self-center text-gray-600 group-hover:text-white group-active:text-gray-900"
@@ -56,13 +75,16 @@ function ProjectCarousel() {
 					return (
 						<div key={i}>
 							<div>
-								<GoDotFill color="white" />
+								<GoDotFill color={i == currentProjectId ? 'white' : 'grey'} />
 							</div>
 						</div>
 					);
 				})}
 			</div>
-			<div className="absolute z-10 right-0 h-screen flex items-center px-2 group hover:bg-white hover:bg-opacity-30 hover:cursor-pointer active:bg-gray-400 active:bg-opacity-30">
+			<div
+				onClick={nextProject}
+				className="absolute z-10 right-0 h-screen flex items-center px-2 group hover:bg-white hover:bg-opacity-30 hover:cursor-pointer active:bg-gray-400 active:bg-opacity-30"
+			>
 				<MdKeyboardArrowRight
 					className="self-center text-gray-600 group-hover:text-white group-active:text-gray-900"
 					size={32}
