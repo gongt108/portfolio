@@ -29,6 +29,22 @@ const tempFiles = [
 function ProjectCarousel() {
 	const [currentProjectId, setCurrentProjectId] = useState(0);
 
+	useEffect(() => {
+		const intervalId = setInterval(() => {
+			setCurrentProjectId((prevId) => {
+				if (prevId === tempFiles.length - 1) {
+					return 0; // Reset to the first project
+				} else {
+					return prevId + 1; // Move to the next project
+				}
+			});
+		}, 5000);
+
+		return () => {
+			clearInterval(intervalId);
+		};
+	}, []);
+
 	const prevProject = () => {
 		if (currentProjectId == 0) {
 			setCurrentProjectId(tempFiles.length - 1);
