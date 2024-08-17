@@ -31,10 +31,10 @@ function ProjectCarousel() {
 
 	return (
 		<div className="flex relative h-100 mx-auto items-center justify-center">
-			<div className="absolute z-10 left-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2">
+			<div className="absolute z-10 left-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2 active:bg-gray-400 active:bg-opacity-30">
 				<MdKeyboardArrowLeft
 					size={32}
-					className="self-center text-gray-600 group-hover:text-white"
+					className="self-center text-gray-600 group-hover:text-white group-active:text-gray-900"
 				/>
 			</div>
 
@@ -47,7 +47,7 @@ function ProjectCarousel() {
 				/>
 			</div>
 			{/* <div className=""> */}
-			<h2 className="absolute top-4 z-20 text-white text-3xl font-bold">
+			<h2 className="absolute top-8 z-20 text-white text-3xl font-bold text-shadow-lg">
 				{tempFiles[currentProjectId].name}
 			</h2>
 			{/* </div> */}
@@ -62,9 +62,9 @@ function ProjectCarousel() {
 					);
 				})}
 			</div>
-			<div className="absolute z-10 right-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2">
+			<div className="absolute z-10 right-0 h-screen flex items-center px-2 group hover:bg-white hover:bg-opacity-30 hover:cursor-pointer active:bg-gray-400 active:bg-opacity-30">
 				<MdKeyboardArrowRight
-					className="self-center text-gray-600 group-hover:text-white"
+					className="self-center text-gray-600 group-hover:text-white group-active:text-gray-900"
 					size={32}
 				/>
 			</div>
