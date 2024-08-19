@@ -33,7 +33,6 @@ function ProjectCarousel() {
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
-			console.log(isPaused);
 			if (isPaused) {
 				setIsPaused((prev) => {
 					return false;
@@ -111,8 +110,14 @@ function ProjectCarousel() {
 			</div>
 			{/* <div className=""> */}
 			<h2 className="absolute top-8 z-20 text-white text-3xl font-bold text-shadow-lg">
-				{tempFiles[currentProjectId].name}
+				Project Highlights
 			</h2>
+			<h3 className="absolute top-20 z-20 text-white text-2xl font-bold text-shadow-lg">
+				{tempFiles[currentProjectId].name}
+			</h3>
+			<h3 className="absolute bottom-16 z-20 text-white text-xl font-bold text-shadow-lg border-2 rounded-lg bg-white bg-opacity-30 px-3 py-2 cursor-pointer hover:underline active:bg-opacity-40">
+				View Project
+			</h3>
 			{/* </div> */}
 			<div className="flex absolute bottom-8 z-20">
 				{tempFiles.map((file, i) => {
