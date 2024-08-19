@@ -28,25 +28,31 @@ const tempFiles = [
 
 function ProjectCarousel() {
 	const [currentProjectId, setCurrentProjectId] = useState(0);
-	const [isSwiping, setIsSwiping] = useState(false);
+	const [isPaused, setIsPaused] = useState(false);
 	const [startingX, setStartingX] = useState(null);
-	const [endingX, setEndingX] = useState(null);
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
-			setCurrentProjectId((prevId) => {
-				if (prevId === tempFiles.length - 1) {
-					return 0; // Reset to the first project
-				} else {
-					return prevId + 1; // Move to the next project
-				}
-			});
+			console.log(isPaused);
+			if (isPaused) {
+				setIsPaused((prev) => {
+					return false;
+				});
+			}
+			!isPaused &&
+				setCurrentProjectId((prevId) => {
+					if (prevId === tempFiles.length - 1) {
+						return 0; // Reset to the first project
+					} else {
+						return prevId + 1; // Move to the next project
+					}
+				});
 		}, 5000);
 
 		return () => {
 			clearInterval(intervalId);
 		};
-	}, []);
+	}, [isPaused]);
 
 	const prevProject = () => {
 		if (currentProjectId == 0) {
@@ -54,6 +60,7 @@ function ProjectCarousel() {
 		} else {
 			setCurrentProjectId(currentProjectId - 1);
 		}
+		setIsPaused(true);
 	};
 
 	const nextProject = () => {
@@ -62,24 +69,19 @@ function ProjectCarousel() {
 		} else {
 			setCurrentProjectId(currentProjectId + 1);
 		}
+		setIsPaused(true);
 	};
 
 	const start = (e) => {
-		setIsSwiping(true);
 		setStartingX(e.changedTouches[0].clientX);
 	};
 	const move = (e) => {
-		setEndingX(e.changedTouches[0].clientX);
 		if (startingX && startingX > e.changedTouches[0].clientX + 25) {
-			console.log('swipe left', startingX, endingX);
+			nextProject();
 		} else if (startingX && startingX < e.changedTouches[0].clientX - 25) {
-			console.log('swipe right', startingX, endingX);
+			prevProject();
 		}
 		setStartingX(null);
-
-		// if (isSwiping) {
-
-		// }
 	};
 
 	return (
