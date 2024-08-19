@@ -28,6 +28,9 @@ const tempFiles = [
 
 function ProjectCarousel() {
 	const [currentProjectId, setCurrentProjectId] = useState(0);
+	const [isSwiping, setIsSwiping] = useState(false);
+	const [startingX, setStartingX] = useState(null);
+	const [endingX, setEndingX] = useState(null);
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
@@ -61,11 +64,29 @@ function ProjectCarousel() {
 		}
 	};
 
+	const start = (e) => {
+		setIsSwiping(true);
+		setStartingX(e.changedTouches[0].clientX);
+	};
+	const move = (e) => {
+		setEndingX(e.changedTouches[0].clientX);
+		if (startingX && startingX > e.changedTouches[0].clientX + 25) {
+			console.log('swipe left', startingX, endingX);
+		} else if (startingX && startingX < e.changedTouches[0].clientX - 25) {
+			console.log('swipe right', startingX, endingX);
+		}
+		setStartingX(null);
+
+		// if (isSwiping) {
+
+		// }
+	};
+
 	return (
 		<div className="flex relative h-100 mx-auto items-center justify-center">
 			<div
 				onClick={prevProject}
-				className="absolute z-10 left-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2 active:bg-gray-400 active:bg-opacity-30"
+				className="absolute z-10 left-0 h-screen flex items-center group hover:bg-white hover:bg-opacity-30 px-2 active:bg-gray-400 active:bg-opacity-30 invisible md:visible lg:visible"
 			>
 				<MdKeyboardArrowLeft
 					size={32}
@@ -73,7 +94,12 @@ function ProjectCarousel() {
 				/>
 			</div>
 
-			<div className="h-100 mx-auto">
+			<div
+				draggable="true"
+				onTouchStart={start}
+				onTouchEnd={move}
+				className="h-100 mx-auto touch-auto"
+			>
 				<img
 					className="object-fill"
 					src={tempFiles[currentProjectId].imgUrl}
@@ -99,7 +125,7 @@ function ProjectCarousel() {
 			</div>
 			<div
 				onClick={nextProject}
-				className="absolute z-10 right-0 h-screen flex items-center px-2 group hover:bg-white hover:bg-opacity-30 hover:cursor-pointer active:bg-gray-400 active:bg-opacity-30"
+				className="absolute z-10 right-0 h-screen flex items-center px-2 group hover:bg-white hover:bg-opacity-30 hover:cursor-pointer active:bg-gray-400 active:bg-opacity-30 invisible md:visible lg:visible"
 			>
 				<MdKeyboardArrowRight
 					className="self-center text-gray-600 group-hover:text-white group-active:text-gray-900"
