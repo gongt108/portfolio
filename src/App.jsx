@@ -3,6 +3,7 @@ import './index.css';
 
 import Sidebar from './Sidebar';
 import ProjectCarousel from './ProjectCarousel';
+import MainProjects from './MainProjects';
 
 import { LuArrowUpFromLine } from 'react-icons/lu';
 
@@ -49,15 +50,10 @@ function App() {
 						Back to Top
 					</a>
 				</section>
-				<section className="h-screen snap-start" id="projects">
-					<div className="flex overflow-y-auto">
+				<section className="h-screen snap-start w-full" id="projects">
+					<div className="flex overflow-y-auto flex-col">
 						<h1>Projects</h1>
-						<button onClick={() => setCount((count) => count + 1)}>
-							Resume {count}
-						</button>
-						<button onClick={() => setCount((count) => count + 1)}>
-							Projects {count}
-						</button>
+						<MainProjects />
 					</div>
 				</section>
 			</div>

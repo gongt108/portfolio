@@ -116,7 +116,7 @@ function ProjectCarousel() {
 				{tempFiles[currentProjectId].name}
 			</h3>
 			<h3 className="absolute bottom-16 z-20 text-white text-xl font-bold text-shadow-lg border-2 rounded-lg bg-white bg-opacity-30 px-3 py-2 cursor-pointer hover:underline active:bg-opacity-40">
-				View Project
+				<a href={`#placeholder${currentProjectId + 1}`}>View Project</a>
 			</h3>
 			{/* </div> */}
 			<div className="flex absolute bottom-8 z-20">
