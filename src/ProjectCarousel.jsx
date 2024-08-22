@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import projects from './assets/projects.json';
+
 import { GoDotFill } from 'react-icons/go';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
@@ -40,7 +42,7 @@ function ProjectCarousel() {
 			}
 			!isPaused &&
 				setCurrentProjectId((prevId) => {
-					if (prevId === tempFiles.length - 1) {
+					if (prevId === projects.length - 1) {
 						return 0; // Reset to the first project
 					} else {
 						return prevId + 1; // Move to the next project
@@ -55,7 +57,7 @@ function ProjectCarousel() {
 
 	const prevProject = () => {
 		if (currentProjectId == 0) {
-			setCurrentProjectId(tempFiles.length - 1);
+			setCurrentProjectId(projects.length - 1);
 		} else {
 			setCurrentProjectId(currentProjectId - 1);
 		}
@@ -63,7 +65,7 @@ function ProjectCarousel() {
 	};
 
 	const nextProject = () => {
-		if (currentProjectId == tempFiles.length - 1) {
+		if (currentProjectId == projects.length - 1) {
 			setCurrentProjectId(0);
 		} else {
 			setCurrentProjectId(currentProjectId + 1);
@@ -103,8 +105,8 @@ function ProjectCarousel() {
 			>
 				<img
 					className="object-fill"
-					src={tempFiles[currentProjectId].imgUrl}
-					alt={`${tempFiles[currentProjectId].name} image`}
+					src={projects[currentProjectId].imgUrl}
+					alt={`${projects[currentProjectId].name} image`}
 					className="z-10"
 				/>
 			</div>
@@ -113,14 +115,14 @@ function ProjectCarousel() {
 				Project Highlights
 			</h2>
 			<h3 className="absolute top-20 z-20 text-white text-2xl font-bold text-shadow-lg">
-				{tempFiles[currentProjectId].name}
+				{projects[currentProjectId].name}
 			</h3>
 			<h3 className="absolute bottom-16 z-20 text-white text-xl font-bold text-shadow-lg border-2 rounded-lg bg-white bg-opacity-30 px-3 py-2 cursor-pointer hover:underline active:bg-opacity-40">
 				<a href={`#placeholder${currentProjectId + 1}`}>View Project</a>
 			</h3>
 			{/* </div> */}
 			<div className="flex absolute bottom-8 z-20">
-				{tempFiles.map((file, i) => {
+				{projects.map((file, i) => {
 					return (
 						<div key={i}>
 							<div>

@@ -4,8 +4,8 @@ function MainProjects() {
 	const [selectedProject, setSelectedProject] = useState(0);
 
 	return (
-		<div className="overflow-y-scroll w-screen flex flex-col">
-			<div className="flex space-x-4 mt-8 my-4 text-center mx-auto px-8 w-full">
+		<div className="overflow-y-scroll w-full flex flex-col">
+			<div className="flex space-x-4 mt-4 my-4 text-center mx-auto px-8 pb-4 w-full border-b">
 				<h2
 					className={`hover:cursor-pointer w-1/5 ${
 						selectedProject == 0 ? 'font-bold underline text-teal-600' : ''

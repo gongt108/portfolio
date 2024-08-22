@@ -51,7 +51,7 @@ function App() {
 					</a>
 				</section>
 				<section className="h-screen snap-start w-full" id="projects">
-					<div className="flex overflow-y-auto flex-col">
+					<div className="flex overflow-y-auto flex-col pt-4 mx-4">
 						<h1>Projects</h1>
 						<MainProjects />
 					</div>
