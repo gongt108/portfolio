@@ -13,99 +13,18 @@ function MainProjects() {
 							className={`hover:cursor-pointer hover:font-bold hover:underline w-1/5 ${
 								selectedProject == i ? 'font-bold underline text-teal-600' : ''
 							}`}
+							onClick={() => setSelectedProject(i)}
 						>
 							{project.name}
 						</h2>
 					);
 				})}
 			</div>
-			<section id="placeholder1">
-				<h1>Placeholder 1</h1>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quas
-				accusamus consequatur reiciendis sit, corporis neque ducimus odit
-				asperiores quam magnam assumenda quidem? Beatae a, impedit voluptatum
-				totam eveniet ullam. Lorem ipsum dolor sit amet consectetur adipisicing
-				elit. Corrupti quas accusamus consequatur reiciendis sit, corporis neque
-				ducimus odit asperiores quam magnam assumenda quidem? Beatae a, impedit
-				voluptatum totam eveniet ullam. Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Corrupti quas accusamus consequatur reiciendis sit,
-				corporis neque ducimus odit asperiores quam magnam assumenda quidem?
-				Beatae a, impedit voluptatum totam eveniet ullam. Lorem ipsum dolor sit
-				amet consectetur adipisicing elit. Corrupti quas accusamus consequatur
-				reiciendis sit, corporis neque ducimus odit asperiores quam magnam
-				assumenda quidem? Beatae a, impedit voluptatum totam eveniet ullam.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quas
-				accusamus consequatur reiciendis sit, corporis neque ducimus odit
-				asperiores quam magnam assumenda quidem? Beatae a, impedit voluptatum
-				totam eveniet ullam. Lorem ipsum dolor sit amet consectetur adipisicing
-				elit. Corrupti quas accusamus consequatur reiciendis sit, corporis neque
-				ducimus odit asperiores quam magnam assumenda quidem? Beatae a, impedit
-				voluptatum totam eveniet ullam. Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Corrupti quas accusamus consequatur reiciendis sit,
-				corporis neque ducimus odit asperiores quam magnam assumenda quidem?
-				Beatae a, impedit voluptatum totam eveniet ullam. Lorem ipsum dolor sit
-				amet consectetur adipisicing elit. Corrupti quas accusamus consequatur
-				reiciendis sit, corporis neque ducimus odit asperiores quam magnam
-				assumenda quidem? Beatae a, impedit voluptatum totam eveniet ullam.
-			</section>
-			<section id="placeholder2">
-				<h1>Placeholder 2</h1>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quas
-				accusamus consequatur reiciendis sit, corporis neque ducimus odit
-				asperiores quam magnam assumenda quidem? Beatae a, impedit voluptatum
-				totam eveniet ullam. Lorem ipsum dolor sit amet consectetur adipisicing
-				elit. Corrupti quas accusamus consequatur reiciendis sit, corporis neque
-				ducimus odit asperiores quam magnam assumenda quidem? Beatae a, impedit
-				voluptatum totam eveniet ullam. Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Corrupti quas accusamus consequatur reiciendis sit,
-				corporis neque ducimus odit asperiores quam magnam assumenda quidem?
-				Beatae a, impedit voluptatum totam eveniet ullam. Lorem ipsum dolor sit
-				amet consectetur adipisicing elit. Corrupti quas accusamus consequatur
-				reiciendis sit, corporis neque ducimus odit asperiores quam magnam
-				assumenda quidem? Beatae a, impedit voluptatum totam eveniet ullam.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quas
-				accusamus consequatur reiciendis sit, corporis neque ducimus odit
-				asperiores quam magnam assumenda quidem? Beatae a, impedit voluptatum
-				totam eveniet ullam. Lorem ipsum dolor sit amet consectetur adipisicing
-				elit. Corrupti quas accusamus consequatur reiciendis sit, corporis neque
-				ducimus odit asperiores quam magnam assumenda quidem? Beatae a, impedit
-				voluptatum totam eveniet ullam. Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Corrupti quas accusamus consequatur reiciendis sit,
-				corporis neque ducimus odit asperiores quam magnam assumenda quidem?
-				Beatae a, impedit voluptatum totam eveniet ullam. Lorem ipsum dolor sit
-				amet consectetur adipisicing elit. Corrupti quas accusamus consequatur
-				reiciendis sit, corporis neque ducimus odit asperiores quam magnam
-				assumenda quidem? Beatae a, impedit voluptatum totam eveniet ullam.
-			</section>
-			<section id="placeholder3">
-				<h1>Placeholder 3</h1>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quas
-				accusamus consequatur reiciendis sit, corporis neque ducimus odit
-				asperiores quam magnam assumenda quidem? Beatae a, impedit voluptatum
-				totam eveniet ullam. Lorem ipsum dolor sit amet consectetur adipisicing
-				elit. Corrupti quas accusamus consequatur reiciendis sit, corporis neque
-				ducimus odit asperiores quam magnam assumenda quidem? Beatae a, impedit
-				voluptatum totam eveniet ullam. Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Corrupti quas accusamus consequatur reiciendis sit,
-				corporis neque ducimus odit asperiores quam magnam assumenda quidem?
-				Beatae a, impedit voluptatum totam eveniet ullam. Lorem ipsum dolor sit
-				amet consectetur adipisicing elit. Corrupti quas accusamus consequatur
-				reiciendis sit, corporis neque ducimus odit asperiores quam magnam
-				assumenda quidem? Beatae a, impedit voluptatum totam eveniet ullam.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quas
-				accusamus consequatur reiciendis sit, corporis neque ducimus odit
-				asperiores quam magnam assumenda quidem? Beatae a, impedit voluptatum
-				totam eveniet ullam. Lorem ipsum dolor sit amet consectetur adipisicing
-				elit. Corrupti quas accusamus consequatur reiciendis sit, corporis neque
-				ducimus odit asperiores quam magnam assumenda quidem? Beatae a, impedit
-				voluptatum totam eveniet ullam. Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Corrupti quas accusamus consequatur reiciendis sit,
-				corporis neque ducimus odit asperiores quam magnam assumenda quidem?
-				Beatae a, impedit voluptatum totam eveniet ullam. Lorem ipsum dolor sit
-				amet consectetur adipisicing elit. Corrupti quas accusamus consequatur
-				reiciendis sit, corporis neque ducimus odit asperiores quam magnam
-				assumenda quidem? Beatae a, impedit voluptatum totam eveniet ullam.
-			</section>
+			<div>
+				<h1>{projects[selectedProject].name}</h1>
+				<p className="mb-2">github: link</p>
+				<p>{projects[selectedProject].content}</p>
+			</div>
 		</div>
 	);
 }
