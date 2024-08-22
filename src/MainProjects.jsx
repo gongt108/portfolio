@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import projects from './assets/projects.json';
 
 function MainProjects() {
 	const [selectedProject, setSelectedProject] = useState(0);
@@ -6,25 +7,17 @@ function MainProjects() {
 	return (
 		<div className="overflow-y-scroll w-full flex flex-col">
 			<div className="flex space-x-4 mt-4 my-4 text-center mx-auto px-8 pb-4 w-full border-b">
-				<h2
-					className={`hover:cursor-pointer w-1/5 ${
-						selectedProject == 0 ? 'font-bold underline text-teal-600' : ''
-					}`}
-				>
-					Placeholder 1
-				</h2>
-				<h2 className=" w-1/5 hover:cursor-pointer hover:font-bold hover:underline active:text-teal-600">
-					Placeholder 2
-				</h2>
-				<h2 className=" w-1/5 hover:cursor-pointer active:font-bold active:underline active:text-teal-600">
-					Placeholder 3
-				</h2>
-				<h2 className=" w-1/5 hover:cursor-pointer active:font-bold active:underline active:text-teal-600">
-					Placeholder 4
-				</h2>
-				<h2 className=" w-1/5 hover:cursor-pointer active:font-bold active:underline active:text-teal-600">
-					Placeholder 5
-				</h2>
+				{projects.map((project, i) => {
+					return (
+						<h2
+							className={`hover:cursor-pointer hover:font-bold hover:underline w-1/5 ${
+								selectedProject == i ? 'font-bold underline text-teal-600' : ''
+							}`}
+						>
+							{project.name}
+						</h2>
+					);
+				})}
 			</div>
 			<section id="placeholder1">
 				<h1>Placeholder 1</h1>
