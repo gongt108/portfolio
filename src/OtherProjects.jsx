@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import projects from './assets/projects.json';
 
-function MainProjects() {
+function OtherProjects() {
 	const [selectedProject, setSelectedProject] = useState(0);
 
 	return (
@@ -37,4 +37,4 @@ function MainProjects() {
 	);
 }
 
-export default MainProjects;
+export default OtherProjects;

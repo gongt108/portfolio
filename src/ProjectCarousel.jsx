@@ -104,10 +104,9 @@ function ProjectCarousel() {
 				className="h-100 mx-auto touch-auto"
 			>
 				<img
-					className="object-fill"
+					className="object-fill z-10"
 					src={projects[currentProjectId].imgUrl}
 					alt={`${projects[currentProjectId].name} image`}
-					className="z-10"
 				/>
 			</div>
 			{/* <div className=""> */}
@@ -118,7 +117,7 @@ function ProjectCarousel() {
 				{projects[currentProjectId].name}
 			</h3>
 			<h3 className="absolute bottom-16 z-20 text-white text-xl font-bold text-shadow-lg border-2 rounded-lg bg-white bg-opacity-30 px-3 py-2 cursor-pointer hover:underline active:bg-opacity-40">
-				<a href={`#placeholder${currentProjectId + 1}`}>View Project</a>
+				<a href={`#projects`}>Go to Projects</a>
 			</h3>
 			{/* </div> */}
 			<div className="flex absolute bottom-8 z-20">
