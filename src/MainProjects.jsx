@@ -5,8 +5,10 @@ function MainProjects() {
 	const [selectedProject, setSelectedProject] = useState(0);
 
 	return (
-		<div className="overflow-y-scroll w-full flex flex-col">
-			<div className="flex space-x-4 mt-4 my-4 text-center mx-auto px-8 pb-4 w-full border-b">
+		<div className="overflow-y-scroll w-full flex flex-col pt-4 mx-8">
+			<h1 className="text-3xl text-center mt-2">Projects</h1>
+
+			<div className="flex space-x-4 mt-6 my-4 text-center mx-auto px-8 pb-4 w-full border-b">
 				{projects.map((project, i) => {
 					return (
 						<h2
@@ -21,7 +23,7 @@ function MainProjects() {
 				})}
 				<a
 					className={`hover:cursor-pointer hover:font-bold hover:underline w-1/5 $`}
-					onClick={() => setSelectedProject(i)}
+					href="/other-projects"
 				>
 					Other Projects
 				</a>

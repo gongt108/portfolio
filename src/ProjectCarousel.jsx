@@ -87,10 +87,10 @@ function ProjectCarousel() {
 
 	return (
 		<div className="flex flex-col w-screen bg-slate-700 justify-center items-center z-10 no-scrollbar">
-			<div className="flex relative mx-auto items-center justify-center">
+			<div className="flex relative mx-auto items-center justify-center h-screen">
 				<div
 					onClick={prevProject}
-					className="absolute z-10 left-0 flex items-center group hover:bg-white hover:bg-opacity-30 px-2 active:bg-gray-400 active:bg-opacity-30 invisible md:visible lg:visible"
+					className="absolute h-screen z-10 left-0 flex items-center group hover:bg-white hover:bg-opacity-30 px-2 active:bg-gray-400 active:bg-opacity-30 invisible md:visible lg:visible"
 				>
 					<MdKeyboardArrowLeft
 						size={32}
@@ -133,7 +133,7 @@ function ProjectCarousel() {
 				</div>
 				<div
 					onClick={nextProject}
-					className="absolute z-10 right-0 flex items-center px-2 group hover:bg-white hover:bg-opacity-30 hover:cursor-pointer active:bg-gray-400 active:bg-opacity-30 invisible md:visible lg:visible"
+					className="absolute h-screen z-10 right-0 flex items-center px-2 group hover:bg-white hover:bg-opacity-30 hover:cursor-pointer active:bg-gray-400 active:bg-opacity-30 invisible md:visible lg:visible"
 				>
 					<MdKeyboardArrowRight
 						className="self-center text-gray-600 group-hover:text-white group-active:text-gray-900"
