@@ -22,7 +22,11 @@ function MainProjects() {
 					);
 				})}
 				<a
-					className={`hover:cursor-pointer hover:font-bold hover:underline w-1/5 $`}
+					className={`hover:cursor-pointer hover:font-bold hover:underline w-1/5 ${
+						selectedProject == 'other'
+							? 'font-bold underline text-teal-600'
+							: ''
+					}`}
 					href="/other-projects"
 				>
 					Other Projects

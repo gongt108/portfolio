@@ -48,7 +48,7 @@ function Sidebar() {
 							<a
 								className="border-b border-gray-400 pb-2 pr-2 mb-2"
 								onClick={pageNavigate}
-								href="/#project-preview"
+								href="/project-preview"
 							>
 								Project Previews
 							</a>
