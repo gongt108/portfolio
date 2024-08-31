@@ -24,6 +24,10 @@ export default {
 					'text-shadow':
 						'3px 3px 6px rgb(0 0 0 / 26%), 0 0 5px rgb(15 3 86 / 22%)',
 				},
+				'.custom-image': {
+					width: '100%',
+					height: 'calc(100% * 1.5);',
+				},
 			});
 		}),
 	],
