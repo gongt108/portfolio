@@ -19,17 +19,14 @@ function Sidebar() {
 	};
 
 	return (
-		<div>
+		<div className="z-10 fixed top-0 right-0">
 			{isMinimized && (
-				<div
-					className="text-white absolute top-4 right-4"
-					onClick={() => setIsMinimized(false)}
-				>
+				<div className="text-white p-8" onClick={() => setIsMinimized(false)}>
 					<GiHamburgerMenu />
 				</div>
 			)}
 			{!isMinimized && (
-				<div className="bg-white border-l border-black text-blue-900 absolute top-0 right-0 pr-4 h-full z-50">
+				<div className="bg-white border-l border-black text-blue-900 h-screen pr-8 z-50">
 					<div className="flex h-full">
 						<div
 							className="h-full flex align-middle items-center px-2 hover:cursor-pointer hover:bg-blue-200 hover:font-bold "

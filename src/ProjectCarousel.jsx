@@ -109,7 +109,7 @@ function ProjectCarousel() {
 						alt={`${projects[currentProjectId].name} image`}
 					/>
 				</div>
-				1{' '}
+
 				<h2 className="absolute top-8 z-20 text-white text-3xl font-bold text-shadow-lg">
 					Project Highlights
 				</h2>

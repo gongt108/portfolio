@@ -14,9 +14,11 @@ function OtherProjects() {
 	};
 
 	return (
-		<div className="overflow-y-scroll w-full flex flex-col pt-4 mx-8">
-			<h1 className="text-3xl text-center mt-2">Other Projects</h1>
-			<div className="mt-4 flex flex-wrap justify-center gap-4 ">
+		<div className="overflow-y-scroll w-full flex flex-col bg-white">
+			<h1 className="text-3xl text-center text-white bg-slate-700 pt-6 pb-4 fixed w-full">
+				Other Projects
+			</h1>
+			<div className="mt-24 mx-8 flex flex-wrap justify-center gap-4 ">
 				{projects.map((project, i) => {
 					return <OtherProjectsCard />;
 				})}
