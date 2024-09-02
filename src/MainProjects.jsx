@@ -5,10 +5,12 @@ function MainProjects() {
 	const [selectedProject, setSelectedProject] = useState(0);
 
 	return (
-		<div className="overflow-y-scroll w-full flex flex-col pt-4 mx-8">
-			<h1 className="text-3xl text-center mt-2">Projects</h1>
+		<div className="overscroll-none over w-full flex flex-col h-screen no-scrollbar">
+			<h1 className="text-3xl text-center pt-6 pb-4 text-white bg-slate-700">
+				Projects
+			</h1>
 
-			<div className="flex space-x-4 mt-6 my-4 text-center mx-auto px-8 pb-4 w-full border-b">
+			<div className="flex space-x-4 mt-6 my-4 text-center mx-auto px-16 pb-4 w-full border-b">
 				{projects.map((project, i) => {
 					return (
 						<h2
@@ -32,7 +34,7 @@ function MainProjects() {
 					Other Projects
 				</a>
 			</div>
-			<div>
+			<div className="overscroll-contain overflow-y-auto px-16">
 				<h1>{projects[selectedProject].name}</h1>
 				<p className="mb-2">github: link</p>
 				<div className="overflow-y-scroll">

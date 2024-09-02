@@ -21,7 +21,10 @@ function Sidebar() {
 	return (
 		<div className="z-10 fixed top-0 right-0">
 			{isMinimized && (
-				<div className="text-white p-8" onClick={() => setIsMinimized(false)}>
+				<div
+					className="text-white p-8 hover:cursor-pointer"
+					onClick={() => setIsMinimized(false)}
+				>
 					<GiHamburgerMenu />
 				</div>
 			)}
