@@ -110,15 +110,15 @@ function ProjectCarousel() {
 					/>
 				</div>
 
-				<h2 className="absolute top-8 z-20 text-white text-3xl font-bold text-shadow-lg">
+				{/* <h2 className="absolute top-8 z-20 text-white text-3xl font-bold text-shadow-lg">
 					Project Highlights
 				</h2>
 				<h3 className="absolute top-20 z-20 text-white text-2xl font-bold text-shadow-lg">
 					{projects[currentProjectId].name}
-				</h3>
-				<h3 className="absolute bottom-16 z-20 text-white text-xl font-bold text-shadow-lg border-2 rounded-lg bg-white bg-opacity-30 px-3 py-2 cursor-pointer hover:underline active:bg-opacity-40">
+				</h3> */}
+				{/* <h3 className="absolute bottom-16 z-20 text-white text-xl font-bold text-shadow-lg border-2 rounded-lg bg-white bg-opacity-30 px-3 py-2 cursor-pointer hover:underline active:bg-opacity-40">
 					<a href={`/projects`}>Go to Projects</a>
-				</h3>
+				</h3> */}
 				{/* </div> */}
 				<div className="flex absolute bottom-8 z-20">
 					{projects.map((file, i) => {
