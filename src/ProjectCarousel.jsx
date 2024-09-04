@@ -104,7 +104,7 @@ function ProjectCarousel() {
 					className="mx-auto touch-auto"
 				>
 					<img
-						className="h-screen z-10"
+						className="h-screen z-10 opacity-40"
 						src={projects[currentProjectId].imgUrl}
 						alt={`${projects[currentProjectId].name} image`}
 					/>
