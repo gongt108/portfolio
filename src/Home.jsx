@@ -18,9 +18,9 @@ function Home() {
 				{/* <Sidebar /> */}
 				<section className="flex flex-col h-screen bg-slate-700 snap-start justify-center items-center z-10 relative">
 					<ProjectCarousel />
-					<div className="flex flex-col space-x-2 absolute top-1/2 z-20">
+					<div className="flex flex-col absolute top-1/2 z-20">
 						<h1 className="text-3xl text-center text-white font-bold mb-4">
-							Vite + React
+							Tiffany Gong
 						</h1>
 
 						<div className="flex space-x-2">
