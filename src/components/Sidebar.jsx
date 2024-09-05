@@ -39,18 +39,18 @@ function Sidebar() {
 						</div>
 						<div className="flex flex-col h-full align-middle justify-center">
 							<a
-								className="border-b border-gray-400 pb-2 pr-2 mb-2"
+								className="border-b border-gray-400 pb-2 pr-2 mb-2 hover:underline"
 								onClick={closeSidebar}
 								href="/"
 							>
 								Home Page
 							</a>
 							<a
-								className="border-b border-gray-400 pb-2 pr-2 mb-2"
+								className="border-b border-gray-400 pb-2 pr-2 mb-2 hover:underline"
 								onClick={pageNavigate}
-								href="/project-preview"
+								href="/resume"
 							>
-								Project Previews
+								Resume
 							</a>
 							<a className="border-b border-gray-400 pb-2 pr-2 mb-2 flex align-middle items-center justify-between hover:underline">
 								Projects <IoIosArrowDown />{' '}

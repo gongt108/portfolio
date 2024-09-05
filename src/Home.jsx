@@ -32,7 +32,7 @@ function Home() {
 							</a>
 							<a
 								className="bg-white bg-opacity-45 rounded-md px-3 py-2 font-semibold"
-								href="/project-preview"
+								href="/projects"
 							>
 								Projects
 							</a>

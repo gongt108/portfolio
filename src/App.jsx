@@ -17,7 +17,7 @@ function App() {
 			<Layout>
 				<Routes>
 					<Route path="/" exact element={<Home />} />
-					<Route path="/project-preview" element={<ProjectCarousel />} />
+					<Route path="/resume" element={<ProjectCarousel />} />
 					<Route path="/projects" element={<MainProjects />} />
 					<Route path="/other-projects" element={<OtherProjects />} />
 				</Routes>
